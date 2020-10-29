@@ -1,0 +1,32 @@
+
+<%- include("partials/header"); -%>
+
+<!--HTML boiler plate is not necessary when using layout partials-->
+<h1>Home</h1>
+    
+<!-- this tag outputs the value of a variable into the template! -->
+<p> <%= startingContent %> </p> 
+
+<% posts.forEach(function (post) { %>
+    <h1> <%= post.title %> </h1>
+    <p> 
+        <%= post.content.substring(0, 100) + "..." %> 
+        <a href="/posts/<%= post.title %>" >Read More</a> 
+    </p>
+<% }) %>
+
+
+<%- include("partials/footer"); -%>
+
+
+
+
+
+
+
+
+
+<!-- 
+    
+
+-->
